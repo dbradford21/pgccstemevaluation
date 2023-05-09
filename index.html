@@ -3,37 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PGCC Faculty Evaluation Submission</title>
+    <title>Welcome - PGCC Faculty Evaluation</title>
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      function handleSubmissionForm(event) {
-        event.preventDefault(); // Prevent the form from submitting
-        // You can add form data processing and storage logic here if needed
-
-        // Redirect to the thank you page
-        window.location.href = "thank-you.html";
-      }
-    </script>
   </head>
   <body>
     <div class="container">
-      <h1>PGCC Faculty Evaluation Submission</h1>
-      <form id="evaluation-form" onsubmit="handleSubmissionForm(event)">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="evidence">Upload Evidence:</label>
-          <input type="file" id="evidence" name="evidence" multiple required />
-        </div>
-        <button type="submit">Submit Evaluation</button>
-      </form>
+      <h1>Welcome to the PGCC Faculty Evaluation System</h1>
+      <p>Please choose your role:</p>
+
+      <button onclick="window.location.href='eval_login.html'">Evaluator</button>
+      <button onclick="window.location.href='welcome.html'">Teacher</button>
     </div>
-    <script src="scripts.js"></script>
   </body>
 </html>
