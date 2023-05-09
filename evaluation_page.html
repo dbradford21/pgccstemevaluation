@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evaluation Page - Faculty Evaluation Submission App</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      function handleEvaluationForm(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        // You can add form data processing and storage logic here if needed
+
+        // Redirect to the thank you page
+        window.location.href = "thank-you.html";
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -16,13 +25,13 @@
         <h2>Submission ID: 1001</h2>
         <p>Date: 2023-04-11</p>
         <p>Status: Submitted</p>
-        <a href="#">View submission details</a>
+        <a href="sub_details.html">View submission details</a>
       </div>
 
       <!-- Add more submissions as needed -->
 
       <h2>Evaluation Form</h2>
-      <form class="evaluation-form">
+      <form class="evaluation-form" onsubmit="handleEvaluationForm(event)">
         <div class="form-group">
           <label for="submission-id">Submission ID:</label>
           <input type="text" id="submission-id" required />
@@ -42,6 +51,6 @@
         </div>
         <button type="submit">Submit Evaluation</button>
       </form>
-    </div>
+    </div> 
   </body>
 </html>
